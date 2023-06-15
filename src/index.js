@@ -1,36 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.scss";
-import Home from "./pages/Home";
-import Info from "./pages/Info";
-import Career from "./pages/Career";
-import Skill from "./pages/Skill";
-import Contact from "./pages/Contact";
 import reportWebVitals from "./reportWebVitals";
-import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Pagination, Mousewheel, Keyboard } from "swiper";
-
-import "swiper/swiper.min.css";
-
-SwiperCore.use([Pagination, Mousewheel, Keyboard]);
-
-const pages = [Home, Info, Career, Skill, Contact];
+import Main from "./Main";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Swiper
-      slidesPerView="auto"
-      pagination
-      mousewheel
-      keyboard
-      direction="vertical"
-      speed={600}
-    >
-      {pages.map((page) => {
-        return <SwiperSlide>{page}</SwiperSlide>;
-      })}
-    </Swiper>
+    <Main />
   </React.StrictMode>
 );
 

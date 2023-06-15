@@ -1,3 +1,13 @@
+:root {
+  --color: white;
+  --background-color: #252525;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--color);
+}
+
 .container {
   display: flex;
   width: 100vw;
@@ -9,4 +19,39 @@
 .swiper-wrapper {
   width: 100vw !important;
   height: 100vh !important;
+}
+
+.swiper-pagination {
+  position: fixed !important;
+  right: 10vw !important;
+  height: 100vh !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .swiper-pagination-bullet {
+    height: auto;
+    background: transparent !important;
+    font-size: 1.2em;
+    transition: all 0.6s ease;
+    &:hover:not(.swiper-pagination-bullet-active) {
+      font-size: 2em;
+    }
+  }
+  .swiper-pagination-bullet-active {
+    color: white;
+    font-size: 3em;
+  }
+}
+
+.swiper-slide {
+  transition: background-color 0.6s ease !important;
+}
+
+.swiper-slide-next,
+.swiper-slide-prev {
+  background-color: rgba(0, 0, 0, 0.9) !important;
+}
+
+.bullet-container {
+  caret-color: transparent;
 }
