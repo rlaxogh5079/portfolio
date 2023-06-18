@@ -1,5 +1,5 @@
 body {
-  background: #252525;
+  background: white;
 }
 
 .container {
@@ -50,19 +50,19 @@ body {
     .icon {
       display: inline;
       margin-right: 1vw;
-      font-size: 5vh;
-      width: 3vw;
+      font-size: 6vh;
     }
 
     .icon::before {
-      background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      background: linear-gradient(to right, #4568dc, #b06ab3);
       background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
     .bullet-text {
-      display: none;
-      background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      display: inline-block;
+      opacity: 0;
+      background: linear-gradient(to right, #4568dc, #b06ab3);
       background-clip: text;
       color: transparent;
     }
@@ -79,7 +79,7 @@ body {
       top: 0;
       text-align: center;
       font-size: 5vh;
-      display: inline-block;
+      opacity: 1;
       width: 10vw;
       height: 5vh;
     }
