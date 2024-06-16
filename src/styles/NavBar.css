@@ -1,3 +1,5 @@
+@import "bulma/css/bulma.css";
+
 .navbar {
   display: flex;
   align-content: center;
@@ -10,4 +12,9 @@
   width: 25vw;
   font-size: 1.4em;
   height: 7vh;
+}
+
+.active {
+  transition: background-color 0.3s ease;
+  background-color: var(--bulma-primary-30) !important;
 }
