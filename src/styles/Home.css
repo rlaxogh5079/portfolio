@@ -1,0 +1,48 @@
+.home-container {
+  background-color: #040404;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+}
+
+.home-header {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  top: 5vh;
+  font-size: 1.4em;
+  width: 80vw;
+}
+
+.home-title1 {
+  margin-bottom: 25vh;
+  font-size: 9em;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.home-title2 {
+  margin-top: 5vh;
+  margin-left: 2.5vw;
+  font-size: 8.9em;
+  font-style: italic;
+}
+
+.about-me {
+  position: absolute;
+  top: 65vh;
+  left: 13vw;
+  font-size: 2.4em;
+}
+
+.underline {
+  background-color: white;
+  height: 0.5vh;
+  width: 10vw;
+  position: absolute;
+  top: 80vh;
+  left: 10vw;
+}
