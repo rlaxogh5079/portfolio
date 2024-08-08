@@ -3,6 +3,7 @@ body {
   font-family: Baskerville Old Face;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black;
 }
 
 code {
