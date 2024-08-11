@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import Home from "./pages/Home";
+import Root from "./pages/Root";
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<Home />);
+root.render(<Root />);
 
 reportWebVitals();
