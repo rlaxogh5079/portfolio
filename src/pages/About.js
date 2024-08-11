@@ -33,8 +33,8 @@ const About = () => {
             <span>{calculateAge()}</span>
           </div>
           <div className="about-field">
-            <span>Residence</span>
-            <span>Daejeon, South Korea</span>
+            <span>University</span>
+            <span>Pai Chai, Daejeon</span>
           </div>
         </div>
       </div>
