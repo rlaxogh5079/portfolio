@@ -1,0 +1,53 @@
+.about-container {
+  background-color: black;
+  color: white;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-title {
+  font-size: 6em;
+  position: absolute;
+  top: 15vh;
+}
+
+.about-profile {
+  border-radius: 50%;
+  width: 25vw;
+  height: 50vh;
+  position: absolute;
+  left: 10vw;
+  top: 40vh;
+}
+
+.about-profile > img {
+  object-fit: cover;
+  width: 100%;
+  border-radius: 50%;
+  position: relative;
+  aspect-ratio: 1/1;
+}
+
+.about-info {
+  width: 35vw;
+  height: 40vh;
+  position: absolute;
+  left: 35vw;
+  top: 0;
+  font-size: 2.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.about-field {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-field > span:nth-child(1) {
+  font-weight: bold;
+}
