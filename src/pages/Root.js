@@ -17,6 +17,7 @@ import "swiper/css/mousewheel";
 import "swiper/css/effect-creative";
 
 import "../styles/Root.css";
+import Career from "./Career";
 
 const Root = () => {
   return (
@@ -53,7 +54,9 @@ const Root = () => {
         <SwiperSlide>
           <About />
         </SwiperSlide>
-        <SwiperSlide>3</SwiperSlide>
+        <SwiperSlide>
+          <Career />
+        </SwiperSlide>
         <SwiperSlide>3</SwiperSlide>
         <SwiperSlide>3</SwiperSlide>
         <SwiperSlide>3</SwiperSlide>

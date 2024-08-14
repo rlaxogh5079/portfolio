@@ -1,0 +1,33 @@
+.career-container {
+  background-color: black;
+  color: white;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.career-title {
+  font-size: 6em;
+  position: absolute;
+  top: 5vh;
+  left: 5vw;
+}
+
+.career-profile {
+  border-radius: 50%;
+  width: 25vw;
+  height: 50vh;
+  position: absolute;
+  left: 60vw;
+  top: 30vh;
+}
+
+.career-profile > img {
+  object-fit: cover;
+  width: 100%;
+  border-radius: 50%;
+  position: relative;
+  aspect-ratio: 1/1;
+}
