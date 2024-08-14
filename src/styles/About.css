@@ -11,7 +11,8 @@
 .about-title {
   font-size: 6em;
   position: absolute;
-  top: 15vh;
+  top: 5vh;
+  left: 5vw;
 }
 
 .about-profile {
@@ -20,7 +21,7 @@
   height: 50vh;
   position: absolute;
   left: 10vw;
-  top: 40vh;
+  top: 30vh;
 }
 
 .about-profile > img {
@@ -33,7 +34,7 @@
 
 .about-info {
   width: 35vw;
-  height: 40vh;
+  height: 50vh;
   position: absolute;
   left: 35vw;
   top: 3vh;

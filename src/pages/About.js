@@ -18,7 +18,7 @@ const About = () => {
     <div className="about-container">
       <div className="about-title">About me</div>
       <div className="about-profile">
-        <img src="assets/profile.jpg" />
+        <img src="assets/profile.jpg" alt="profile" />
         <div className="about-info">
           <div className="about-field">
             <span>Name</span>
@@ -31,6 +31,10 @@ const About = () => {
           <div className="about-field">
             <span>Age</span>
             <span>{calculateAge()}</span>
+          </div>
+          <div className="about-field">
+            <span>Position</span>
+            <span>Full-Stack</span>
           </div>
           <div className="about-field">
             <span>University</span>
