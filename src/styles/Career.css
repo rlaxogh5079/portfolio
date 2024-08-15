@@ -1,3 +1,7 @@
+:root {
+  --background-position: 45vh;
+}
+
 .career-container {
   background-color: black;
   color: white;
@@ -15,19 +19,83 @@
   left: 5vw;
 }
 
-.career-profile {
-  border-radius: 50%;
+.career-profile > img {
+  object-fit: cover;
   width: 25vw;
-  height: 50vh;
+  border-radius: 50%;
   position: absolute;
   left: 60vw;
   top: 30vh;
 }
 
-.career-profile > img {
-  object-fit: cover;
-  width: 100%;
-  border-radius: 50%;
-  position: relative;
+.career-year-list {
+  width: 20vw;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 3.5vw;
+  top: 25vh;
+}
+
+.career-year-list > li {
+  height: 15vh;
+  font-size: 2.4em;
+  cursor: pointer;
+  transition: all 0.3s ease;
   aspect-ratio: 1/1;
+  border-radius: 50%;
+  list-style-type: none;
+  z-index: 2;
+}
+
+.career-year-list > li,
+.year-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15vh;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+}
+
+.year-background {
+  background-color: white;
+  position: relative;
+  bottom: var(--background-position);
+  z-index: 1;
+  animation: move-background 1s ease;
+  transition: all 0.4s ease;
+}
+
+.active {
+  color: black;
+}
+
+.career-year-list > li:nth-child(1).active ~ .year-background {
+  --background-position: 45vh;
+}
+.career-year-list > li:nth-child(2).active ~ .year-background {
+  --background-position: 30vh;
+}
+.career-year-list > li:nth-child(3).active ~ .year-background {
+  --background-position: 15vh;
+}
+.career-year-list > li:nth-child(4).active ~ .year-background {
+  --background-position: 0vh;
+}
+
+@keyframes move-background {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.2);
+  }
+  100% {
+    transform: scale(1);
+    bottom: var(--background-position);
+  }
 }
