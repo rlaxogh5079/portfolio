@@ -14,11 +14,13 @@ const Career = () => {
         <li
           className={`${flag[0] ? "active" : ""} `}
           onClick={() => {
-            setFlag([true, false, false, false]);
-            setMoving(true);
-            setTimeout(() => {
-              setMoving(false);
-            }, 500);
+            if (!moving) {
+              setFlag([true, false, false, false]);
+              setMoving(true);
+              setTimeout(() => {
+                setMoving(false);
+              }, 500);
+            }
           }}
         >
           2021
@@ -26,11 +28,13 @@ const Career = () => {
         <li
           className={`${flag[1] ? "active" : ""}`}
           onClick={() => {
-            setFlag([false, true, false, false]);
-            setMoving(true);
-            setTimeout(() => {
-              setMoving(false);
-            }, 500);
+            if (!moving) {
+              setFlag([false, true, false, false]);
+              setMoving(true);
+              setTimeout(() => {
+                setMoving(false);
+              }, 500);
+            }
           }}
         >
           2022
@@ -38,11 +42,13 @@ const Career = () => {
         <li
           className={`${flag[2] ? "active" : ""}`}
           onClick={() => {
-            setFlag([false, false, true, false]);
-            setMoving(true);
-            setTimeout(() => {
-              setMoving(false);
-            }, 500);
+            if (!moving) {
+              setFlag([false, false, true, false]);
+              setMoving(true);
+              setTimeout(() => {
+                setMoving(false);
+              }, 500);
+            }
           }}
         >
           2023
@@ -50,11 +56,13 @@ const Career = () => {
         <li
           className={`${flag[3] ? "active" : ""}`}
           onClick={() => {
-            setFlag([false, false, false, true]);
-            setMoving(true);
-            setTimeout(() => {
-              setMoving(false);
-            }, 500);
+            if (!moving) {
+              setFlag([false, false, false, true]);
+              setMoving(true);
+              setTimeout(() => {
+                setMoving(false);
+              }, 500);
+            }
           }}
         >
           2024
