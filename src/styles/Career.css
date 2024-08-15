@@ -41,6 +41,9 @@
 }
 
 .career-year-list > li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 15vh;
   font-size: 2.4em;
   cursor: pointer;
@@ -53,9 +56,6 @@
 
 .career-year-list > li,
 .year-background {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 15vh;
   border-radius: 50%;
   aspect-ratio: 1/1;
