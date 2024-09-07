@@ -1,5 +1,6 @@
 import Home from "./Home";
 import About from "./About";
+import Career from "./Career";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
   Scrollbar,
@@ -17,7 +18,6 @@ import "swiper/css/mousewheel";
 import "swiper/css/effect-creative";
 
 import "../styles/Root.css";
-import Career from "./Career";
 
 const Root = () => {
   return (

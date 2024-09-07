@@ -30,92 +30,43 @@
 
 .career-year-list {
   width: 20vw;
-  height: 60vh;
+  height: 40vh;
+  display: block;
+  position: absolute;
+  left: 15vw !important;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  left: 2.5vw;
-  top: 25vh;
-  margin: 0;
+  justify-content: space-around;
+  align-items: start;
 }
 
-.career-year-list > li {
+.career-year {
+  display: block;
+  color: white;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 15vh;
-  font-size: 2.4em;
+  font-size: 1.2em;
   cursor: pointer;
-  transition: all 0.3s ease;
-  aspect-ratio: 1/1;
-  border-radius: 50%;
-  list-style-type: none;
-  z-index: 2;
+  transition-property: background-color, color;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-out;
 }
 
-.career-year-list > li,
-.year-background {
-  height: 15vh;
-  border-radius: 50%;
-  aspect-ratio: 1/1;
-}
-
-.year-background {
-  background-color: white;
-  position: relative;
-  bottom: var(--background-position);
-  z-index: 1;
-  transition: all 0.5s ease;
-}
-
-.active {
+.career-year-active {
   color: black;
+  background-color: white;
 }
 
-.moving {
-  animation: bounce 0.5s ease;
-}
-
-.career-year-list > li:nth-child(1).active ~ .year-background {
-  --background-position: 48vh;
-}
-.career-year-list > li:nth-child(2).active ~ .year-background {
-  --background-position: 36vh;
-}
-.career-year-list > li:nth-child(3).active ~ .year-background {
-  --background-position: 24vh;
-}
-.career-year-list > li:nth-child(4).active ~ .year-background {
-  --background-position: 12vh;
-}
-
-.career-content {
+.career-content-container {
+  position: absolute;
   width: 40vw;
   height: 60vh;
-  position: absolute;
-  top: 30vh;
-}
-
-.content-active {
-  transition: all 0.5s ease;
-  opacity: 0;
-  transform: translateY(40vh);
-}
-
-.up {
-  transform: translateY(-40vh) !important;
-}
-
-@keyframes bounce {
-  0% {
-    transform: scale(1, 1);
-  }
-  50% {
-    transform: scale(0.1, 0.1);
-  }
-  100% {
-    transform: scale(1, 1);
-  }
+  color: white;
+  top: 10vh;
+  right: 10vw;
+  text-align: center;
 }
