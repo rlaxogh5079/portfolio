@@ -9,8 +9,8 @@ import "swiper/css/effect-creative";
 const CareerContent = ({ date, content }) => {
   return (
     <>
-      <h2>{date}</h2>
-      <div>{content}</div>
+      <h2 className="career-content-title">{date}</h2>
+      <div className="career-content">{content}</div>
       <div style={{ marginBottom: "3vh" }}></div>
     </>
   );
