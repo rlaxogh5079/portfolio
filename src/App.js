@@ -1,7 +1,7 @@
 import "./styles/App.scss";
 
 const App = () => {
-  return <div>Hello World</div>;
+  return <div className="p-body">Hello World</div>;
 };
 
 export default App;
