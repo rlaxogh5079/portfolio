@@ -1,7 +1,14 @@
+import Intro from "./pages/Intro";
+import Skill from "./pages/Skill";
 import "./styles/App.scss";
 
 const App = () => {
-  return <div className="p-body">Hello World</div>;
+  return (
+    <>
+      <Intro />
+      <Skill />
+    </>
+  );
 };
 
 export default App;

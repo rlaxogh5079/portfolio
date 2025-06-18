@@ -1,0 +1,151 @@
+@use "./variable" as var;
+
+.slide-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  img {
+    width: 100%;
+    height: 400px;
+    object-fit: contain;
+    border-radius: 1rem;
+    transform: scale(0.7);
+    opacity: 0.3;
+    transition: all 0.7s ease;
+  }
+
+  .slide-caption {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    color: var.$color-accent-bright;
+    opacity: 0.8;
+  }
+}
+
+.swiper-slide:not(.swiper-slide-active) .slide-item img {
+  transform: scale(0.7);
+  opacity: 0.3;
+}
+
+.swiper-slide .slide-item img {
+  transform: scale(0.7);
+  opacity: 0.3;
+  transition: all 0.7s ease;
+}
+
+.swiper-slide-active .slide-item img {
+  transform: scale(1);
+  opacity: 1;
+  transition-delay: 2.5s;
+}
+
+.intro.dark {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 80vh;
+  padding: 10vh 5vw;
+
+  .intro-main {
+    display: flex;
+    gap: 2rem;
+    .intro-left {
+      flex: 2;
+      max-width: 50%;
+      display: inline-block;
+      height: 50vh;
+
+      .title {
+        font-size: 5rem;
+        font-weight: 900;
+        background: linear-gradient(
+          90deg,
+          var.$color-accent-bright,
+          var.$color-accent-dark
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        line-height: 2;
+      }
+
+      .subtitle {
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: var.$color-accent;
+        margin-bottom: 2rem;
+        line-height: 1.4;
+      }
+
+      .desc {
+        font-size: 1rem;
+        line-height: 1.8;
+        opacity: 0.75;
+      }
+    }
+
+    .intro-right {
+      flex: 2;
+      max-width: 50%;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      height: 50vh;
+
+      .swiper {
+        width: 70%;
+        height: 100%;
+      }
+    }
+  }
+
+  .intro-bottom {
+    align-self: center; // 가운데 정렬
+    margin-bottom: 3vh;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: var.$color-accent;
+    cursor: pointer;
+    animation: bounce 1.5s infinite;
+  }
+
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(10px);
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .intro-left,
+    .intro-right {
+      max-width: 100%;
+      flex: unset;
+      height: auto;
+    }
+
+    .intro-right {
+      display: none;
+    }
+
+    .title {
+      font-size: 2.5rem;
+    }
+
+    .subtitle {
+      font-size: 1.5rem;
+    }
+
+    .desc {
+      font-size: 0.95rem;
+    }
+  }
+}
