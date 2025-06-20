@@ -18,9 +18,17 @@
 
   .slide-caption {
     margin-top: 1rem;
-    font-size: 0.95rem;
     color: var.$color-accent-bright;
     opacity: 0.8;
+
+    .title {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+    .subtitle {
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+    }
   }
 }
 
@@ -38,7 +46,7 @@
 .swiper-slide-active .slide-item img {
   transform: scale(1);
   opacity: 1;
-  transition-delay: 2.5s;
+  transition-delay: 1.5s;
 }
 
 .intro.dark {
@@ -94,21 +102,32 @@
       height: 50vh;
 
       .swiper {
-        width: 70%;
+        width: 100%;
         height: 100%;
       }
     }
   }
 
   .intro-bottom {
-    align-self: center; // 가운데 정렬
-    margin-bottom: 3vh;
-    font-size: 2rem;
-    background: none;
-    border: none;
-    color: var.$color-accent;
-    cursor: pointer;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     animation: bounce 1.5s infinite;
+    opacity: 0.4;
+    .bottom-button {
+      color: var.$color-accent;
+      cursor: pointer;
+      font-size: 3rem;
+      background: none;
+      border: none;
+    }
+
+    .bottom-text {
+      color: var.$color-accent;
+      font-size: 1.5rem;
+    }
   }
 
   @keyframes bounce {

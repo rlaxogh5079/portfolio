@@ -23,48 +23,22 @@ const Intro = () => {
         <div className="intro-right">
           <Swiper
             modules={[Autoplay]}
+            centeredSlides={true}
             loop={true}
-            slidesPerView={1}
-            spaceBetween={30}
-            speed={5000}
+            slidesPerView={3}
+            spaceBetween={0}
+            speed={3000}
             autoplay={{ delay: 0, disableOnInteraction: false }}
             allowTouchMove={false}
           >
             <SwiperSlide>
               <div className="slide-item">
-                <img src="/img/5pplication.png" />
-                <div className="slide-caption">
-                  5pplication: 여행 감정 기록 앱
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="slide-item">
-                <img src="/img/cherry_picker.png" />
-                <div className="slide-caption">
-                  Cherry Picker: 카드 통합 관리 앱
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="slide-item">
-                <img src="/img/MAC.png" />
-                <div className="slide-caption">MAC: 중고 거래 중개 앱</div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="slide-item">
-                <img src="/img/union.png" />
-                <div className="slide-caption">
-                  UNION: 대학교 통합 커뮤니티 앱
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="slide-item">
                 <img src="/img/task_spark.png" />
                 <div className="slide-caption">
-                  Task Spark: 보상 및 경쟁 심리 기반 할일 관리 앱
+                  <div className="title">Task Spark</div>
+                  <div className="subtitle">
+                    보상 및 경쟁 심리 기반 할일 관리 앱
+                  </div>
                 </div>
               </div>
             </SwiperSlide>
@@ -72,7 +46,46 @@ const Intro = () => {
               <div className="slide-item">
                 <img src="/img/grand_buddy.png" />
                 <div className="slide-caption">
-                  동네 손주: 청년 및 고령자 연결 일상 도움 플랫폼 앱
+                  <div className="title">동네 손주</div>
+                  <div className="subtitle">
+                    청년 및 고령자 연결 일상 도움 플랫폼 앱
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="slide-item">
+                <img src="/img/5pplication.png" />
+                <div className="slide-caption">
+                  <div className="title">5pplication</div>
+                  <div className="subtitle">여행 감정 기록 앱</div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="slide-item">
+                <img src="/img/cherry_picker.png" />
+                <div className="slide-caption">
+                  <div className="title">Cherry Picker</div>
+                  <div className="subtitle">카드 통합 관리 앱</div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="slide-item">
+                <img src="/img/MAC.png" />
+                <div className="slide-caption">
+                  <div className="title">MAC</div>
+                  <div className="subtitle">중고 거래 중개 앱</div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="slide-item">
+                <img src="/img/union.png" />
+                <div className="slide-caption">
+                  <div className="title">Union</div>
+                  <div className="subtitle">대학교 통합 커뮤니티 앱</div>
                 </div>
               </div>
             </SwiperSlide>
@@ -80,16 +93,19 @@ const Intro = () => {
         </div>
       </div>
 
-      <button
-        className="intro-bottom"
-        onClick={() => {
-          document
-            .getElementById("next-section")
-            ?.scrollIntoView({ behavior: "smooth" });
-        }}
-      >
-        ↓
-      </button>
+      <div className="intro-bottom">
+        <div className="bottom-text">다음 페이지로</div>
+        <button
+          className="bottom-button"
+          onClick={() => {
+            document
+              .getElementById("skill-section")
+              ?.scrollIntoView({ behavior: "smooth" });
+          }}
+        >
+          ↓
+        </button>
+      </div>
     </div>
   );
 };
