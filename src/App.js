@@ -15,7 +15,6 @@ const App = () => {
       <Skills />
       <Experience />
       <Contact />
-
     </>
   );
 };
