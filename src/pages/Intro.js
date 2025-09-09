@@ -1,9 +1,27 @@
 import "../styles/Intro.scss";
 import { Autoplay } from "swiper/modules";
+import { useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
+const FIRST_DELAY = 500;
+const NORMAL_DELAY = 1000;
+
 const Intro = () => {
+  const swiperRef = useRef(null);
+
+  useEffect(() => {
+    if (!swiperRef.current) return;
+
+    swiperRef.current.autoplay?.stop();
+    const t = setTimeout(() => {
+      if (!swiperRef.current?.destroyed) {
+        swiperRef.current.autoplay?.start();
+      }
+    }, FIRST_DELAY);
+
+    return () => clearTimeout(t);
+  }, []);
   return (
     <div className="intro dark">
       <div className="intro-main">
@@ -23,12 +41,17 @@ const Intro = () => {
         <div className="intro-right">
           <Swiper
             modules={[Autoplay]}
-            centeredSlides={true}
-            loop={true}
+            onSwiper={(s) => (swiperRef.current = s)}
+            loop
+            centeredSlides
             slidesPerView={3}
             spaceBetween={0}
             speed={3000}
-            autoplay={{ delay: 0, disableOnInteraction: false }}
+            autoplay={{
+              delay: NORMAL_DELAY,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }}
             allowTouchMove={false}
           >
             <SwiperSlide>
@@ -95,14 +118,7 @@ const Intro = () => {
 
       <div className="intro-bottom">
         <div className="bottom-text">다음 페이지로</div>
-        <button
-          className="bottom-button"
-          onClick={() => {
-            document
-              .getElementById("skill-section")
-              ?.scrollIntoView({ behavior: "smooth" });
-          }}
-        >
+        <button className="bottom-button" onClick={() => {}}>
           ↓
         </button>
       </div>
