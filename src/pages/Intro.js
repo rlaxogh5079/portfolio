@@ -22,8 +22,9 @@ const Intro = () => {
 
     return () => clearTimeout(t);
   }, []);
+
   return (
-    <div className="intro dark">
+    <div className="intro section">
       <div className="intro-main">
         <div className="intro-left">
           <div className="title">이상과 상상을 현실로.</div>
@@ -46,7 +47,7 @@ const Intro = () => {
             centeredSlides
             slidesPerView={3}
             spaceBetween={0}
-            speed={3000}
+            speed={1000}
             autoplay={{
               delay: NORMAL_DELAY,
               disableOnInteraction: false,
