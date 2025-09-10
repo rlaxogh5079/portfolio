@@ -21,9 +21,12 @@ const AboutMe = () => {
               프론트엔드부터 백엔드, 인프라까지 아우르는 풀스택 개발자입니다.
             </p>
             <p className="content-summary">
-              Go(Gin) 백엔드와 Flutter 기반의 멀티플랫폼 클라이언트, 그리고
-              Docker·VMware ESXi 환경에서의 배포에 강점이 있습니다. 데이터 기반
-              문제 해결을 선호하며, 성능·안정성·사용자 경험의 균형을 중요하게
+              Go(Gin, Fiber), Python(FastAPI, Flask, Django),
+              Node.js(Express.js) 등 다양한 백엔드 프레임워크를 다룰 수 있고,
+              클라이언트 쪽은 React와 Flutter로 자주 작업합니다. Docker와 VMware
+              ESXi 환경에서의 배포 경험이 있으며, Cloudflare, AWS, OCI 같은
+              클라우드 서비스도 활용해봤습니다. 데이터 기반으로 문제를 해결하는
+              걸 좋아하고, 성능·안정성·사용자 경험의 균형을 늘 중요하게
               생각합니다.
             </p>
 
@@ -31,19 +34,22 @@ const AboutMe = () => {
               <div className="desc-container">
                 <span className="desc-title">주요 스택</span>
                 <span className="desc-content">
-                  Go(Gin), Flutter, React, Docker, PostgreSQL
+                  Go(Gin, Fiber), Python(FastAPI, Flask, Django),
+                  Node.js(Express.js), React, Flutter, PostgreSQL
                 </span>
               </div>
               <div className="desc-container">
                 <span className="desc-title">관심 분야</span>
                 <span className="desc-content">
-                  웨어러블·의료데이터, 실시간 번역/커뮤니케이션, 인프라 자동화
+                  대규모 웹 서비스 아키텍쳐, 멀티플랫폼 앱 최적화, 보안 자동화,
+                  머신러닝 기반 데이터 분석
                 </span>
               </div>
               <div className="desc-container">
                 <span className="desc-title">현재</span>
                 <span className="desc-content">
-                  Mind Guardians 연구 · Bridger B2B 플랫폼
+                  국가과학기술인력개발원(KIRD) 2025 장애-비장애 학생 팀 프로젝트
+                  (Mind Gurdians) 참가중
                 </span>
               </div>
             </div>
@@ -53,34 +59,37 @@ const AboutMe = () => {
         <section className="about-highlight">
           <div className="h card">
             <div className="h-icon" aria-hidden>
-              ⚙️
+              🏗️
             </div>
-            <h3 className="h-title">Product-oriented 개발</h3>
+            <h3 className="h-title">대규모 웹 서비스 아키텍처</h3>
             <p className="h-content">
-              기능 구현에 그치지 않고, 기획·데이터·배포까지 전주기를 고려합니다.
-              사용자 스토리를 기반으로 설계하고 빠르게 실험/개선합니다.
+              모놀리식과 마이크로서비스를 상황에 맞게 선택하고, API
+              설계·캐싱·큐잉으로 트래픽을 견딜 수 있는 구조를 만듭니다. 수평
+              확장과 장애 격리를 염두에 둔 설계로 안정적인 서비스를 지향합니다.
             </p>
           </div>
 
           <div className="h card">
             <div className="h-icon" aria-hidden>
-              🚀
+              📱
             </div>
-            <h3 className="h-title">성능 & 안정성</h3>
+            <h3 className="h-title">멀티플랫폼 앱 최적화</h3>
             <p className="h-content">
-              Go 백엔드 + Docker 배포로 경량·고성능을 추구하고,
-              로깅/모니터링으로 회복탄력성을 확보합니다.
+              React와 Flutter로 웹·모바일을 동시에 커버합니다. 불필요한 렌더를
+              줄이고 상태 관리를 정돈해 성능을 끌어올리며, 접근성·국제화·릴리즈
+              자동화까지 고려해 제품 완성도를 높입니다.
             </p>
           </div>
 
           <div className="h card">
             <div className="h-icon" aria-hidden>
-              🤝
+              📊
             </div>
-            <h3 className="h-title">협업 & 문서화</h3>
+            <h3 className="h-title">머신러닝 기반 데이터 분석</h3>
             <p className="h-content">
-              이슈/PR 중심 협업, README·API 문서 정리, 커밋 컨벤션 준수로 팀
-              생산성을 높입니다.
+              Python과 다양한 라이브러리로 데이터를 수집·전처리하고, 시각화와
+              모델링을 통해 문제 해결의 인사이트를 발굴합니다. 서비스 운영
+              지표부터 사용자 행동까지 데이터 중심의 접근을 선호합니다.
             </p>
           </div>
         </section>
