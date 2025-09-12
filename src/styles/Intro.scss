@@ -68,8 +68,12 @@ $op-dim: 0.45;
       transform: scale(1);
       opacity: 1;
     }
-    .title { opacity: 1; }
-    .subtitle { opacity: 0.8; }
+    .title {
+      opacity: 1;
+    }
+    .subtitle {
+      opacity: 0.8;
+    }
   }
 
   &:not(.swiper-slide-active) {
@@ -78,8 +82,12 @@ $op-dim: 0.45;
         transform: scale(0.6);
         opacity: $op-dim;
       }
-      .title { opacity: $op-dim; }
-      .subtitle { opacity: $op-dim; }
+      .title {
+        opacity: $op-dim;
+      }
+      .subtitle {
+        opacity: $op-dim;
+      }
     }
   }
 }
@@ -96,8 +104,8 @@ $op-dim: 0.45;
     gap: 10vw;
 
     .intro-left {
-      flex: 1;
-      width: 40vw;
+      flex: 1.2;
+      width: clamp(320px, 40vw, 44rem);
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -130,8 +138,8 @@ $op-dim: 0.45;
     }
 
     .intro-right {
-      width: 40vw;
-      flex: 1;
+      flex: 1.5;
+      width: clamp(360px, 46vw, 48rem);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -167,8 +175,123 @@ $op-dim: 0.45;
   }
 
   @keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50%      { transform: translateY(10px); }
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(10px);
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  :root {
+    --slide-img-h: clamp(180px, 70vw, 320px);
+    --intro-title: clamp(1.5rem, 4vw + 1rem, 2.4rem);
+  }
+
+  .intro.section {
+    padding: 2vh 1vw;
+
+    .intro-main {
+      gap: 5vh;
+
+      .intro-right {
+        .slide-caption > .subtitle {
+          display: none;
+        }
+      }
+    }
+
+    .intro-bottom {
+      > * {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (min-width: 744px) and (max-width: 833.98px) {
+  :root {
+    --intro-title: clamp(1.6rem, 1.6vw + 1.1rem, 3rem);
+    --intro-subtitle: clamp(1.1rem, 1.2vw + 0.9rem, 1.8rem);
+    --intro-desc: clamp(1.05rem, 0.8vw + 0.6rem, 1.4rem);
+    --intro-slide-title: clamp(1rem, 0.6vw + 0.9rem, 1.15rem);
+    --intro-slide-subtitle: clamp(0.95rem, 0.5vw + 0.85rem, 1.05rem);
+    --slide-img-h: clamp(240px, 38vh, 360px);
+    --intro-bottom-button: clamp(1.8rem, 1.4vw + 0.9rem, 2.4rem);
+    --intro-bottom-text: clamp(1rem, 0.9vw + 0.6rem, 1.3rem);
+  }
+
+  .intro.section {
+    padding: 4vh 3vw;
+
+    .intro-main {
+      gap: 6vw;
+
+      .intro-left {
+        width: clamp(360px, 44vw, 40rem);
+      }
+
+      .intro-right {
+        width: clamp(420px, 80vw, 48rem);
+        flex: 1.6;
+      }
+    }
+  }
+}
+
+@media (min-width: 834px) and (max-width: 1023.98px) {
+  :root {
+    --intro-title: clamp(1.8rem, 1.9vw + 1.1rem, 3.6rem);
+    --intro-subtitle: clamp(1.2rem, 1.4vw + 0.9rem, 2.1rem);
+    --intro-desc: clamp(1.1rem, 1vw + 0.6rem, 1.45rem);
+    --intro-slide-title: clamp(1.05rem, 0.7vw + 0.9rem, 1.2rem);
+    --intro-slide-subtitle: clamp(1rem, 0.55vw + 0.85rem, 1.1rem);
+    --slide-img-h: clamp(260px, 42vh, 380px);
+  }
+
+  .intro.section {
+    padding: 6vh 3vw;
+
+    .intro-main {
+      gap: 8vw;
+
+      .intro-left {
+        width: clamp(380px, 42vw, 42rem);
+        flex: 1.2;
+      }
+
+      .intro-right {
+        width: clamp(440px, 50vw, 50rem);
+        flex: 1.6;
+      }
+    }
+  }
+}
+@media (min-width: 1024px) and (max-width: 1366.98px) {
+  :root {
+    --intro-title: clamp(2.6rem, 3vw + 1.2rem, 5rem);
+    --intro-subtitle: clamp(1.6rem, 2vw + 1rem, 3rem);
+    --intro-desc: clamp(1.3rem, 1.5vw + 0.8rem, 2rem);
+    --intro-slide-title: clamp(1.2rem, 1vw + 1rem, 1.6rem);
+    --intro-slide-subtitle: clamp(1rem, 0.8vw + 0.9rem, 1.4rem);
+    --slide-img-h: clamp(320px, 48vh, 440px);
+  }
+
+  .intro.section .intro-main {
+    gap: 9vw;
+
+    .intro-left {
+      width: clamp(420px, 40vw, 44rem);
+      flex: 1.2;
+    }
+
+    .intro-right {
+      width: clamp(520px, 52vw, 56rem);
+      flex: 1.7;
+    }
   }
 }
 
@@ -178,39 +301,15 @@ $op-dim: 0.45;
   }
 
   .intro.section {
-    padding: 0;
+    padding: 3vh 2vw;
 
     .intro-main {
       flex-direction: column;
 
-      > * { min-width: 0; }
-
       .intro-left,
       .intro-right {
-        width: 90vw;
+        width: min(92vw, 44rem);
       }
-    }
-  }
-}
-
-@media (max-width: 600px) {
-  :root {
-    --slide-img-h: clamp(180px, 70vw, 320px);
-  }
-
-  .intro.section {
-    padding: 0;
-
-    .intro-main {
-      gap: 0;
-
-      .intro-right {
-        .slide-caption { display: none; }
-      }
-    }
-
-    .intro-bottom {
-      > * { display: none; }
     }
   }
 }
